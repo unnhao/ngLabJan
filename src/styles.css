@@ -20,8 +20,8 @@ body{
 .app {
   position: relative;
   overflow: hidden;
-  width: 360px;
-  height: 620px;
+  width: 400px;
+  height: 680px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
@@ -39,7 +39,7 @@ body{
 .title {
   text-align: center;
   color: #FF927A;
-  margin: 20px 0;
+  margin: 40px 0;
 }
 
 
@@ -48,7 +48,7 @@ body{
   justify-content: center;
   align-items:center;
   width: 100%;
-  margin-top: 8px;
+  margin-top: 10px;
   position:relative;
   transition: .3s;
 }
@@ -64,7 +64,7 @@ input{
   background: #F8F5F0;
   border: none;
   border-radius: 10px;
-  width: 330px;
+  width: 100%;
   height: 45px;
   outline: none;
 }
@@ -76,7 +76,7 @@ select{
   background: #F8F5F0;
   border: none;
   border-radius: 10px;
-  width: 330px;
+  width: 100%;
   height: 45px;
   outline: none;
   -webkit-appearance: none;
