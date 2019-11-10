@@ -1,12 +1,13 @@
 <div class="app">
   <h1 class="title">SIGN UP</h1>
-  <form action="">
+  <form [formGroup]="validationForm" (ngSubmit)="submit()">
     <div class="block">
-      <input id="inputName" type="text" placeholder="Name">
+      <input type="text" placeholder="Name" formControlName="name">
     </div>
 
     <div class="block">
-      <select id="inputGender" class="form-control">
+      <select class="form-control" formControlName="gender">
+        <option value="" selected>Select Gender</option>
         <option value="MEN">MEN</option>
         <option value="FEMEN">FEMEN</option>
         <option value="HIDDEN">HIDDEN</option>
@@ -14,31 +15,34 @@
     </div>
 
     <div class="block">
-      <input id="inputAge" type="text" placeholder="Age">
+      <input type="number" placeholder="Age" formControlName="age">
     </div>
 
     <div class="block">
-      <input id="inputEmail" type="text" placeholder="Email">
+      <input type="text" placeholder="Email" formControlName="email">
     </div>
 
     <div class="block">
-      <input class="ng-valid" id="inputCity" type="text" placeholder="City">
+      <select name="" formControlName="city" value="placeholder">
+        <option value="" selected>Select City</option>
+        <option value="cityData.name" *ngFor="let cityData of cityDatas">{{cityData.name}}</option>
+      </select>
     </div>
 
     <div class="block">
-      <input class="ng-invalid" id="inputZip" type="text" placeholder="Zip">
+      <input class="ng-invalid" id="inputZip" type="text" placeholder="Zip" formControlName="zip">
     </div>
 
     <div class="block">
-      <input id="inputReferrer" type="text" placeholder="Referrer">
+      <input id="inputReferrer" type="text" placeholder="Referrer" formControlName="referrer">
     </div>
 
     <div class="block">
-      <button class="submit">SUBMIT</button>
+      <button type="submit" class="submit">SUBMIT</button>
     </div>
 
     <div class="block">
-      <button class="button">RESET</button>
+      <button type="reset" class="reset" (click)="reset()">RESET</button>
     </div>
   </form>
 </div>

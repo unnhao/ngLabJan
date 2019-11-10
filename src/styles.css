@@ -3,6 +3,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline:none;
+}
+*:focus {
+  outline:none;
 }
 
 html, body{
@@ -21,7 +25,7 @@ body{
   position: relative;
   overflow: hidden;
   width: 400px;
-  height: 680px;
+  height: 660px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
@@ -61,27 +65,30 @@ input{
   box-sizing:border-box;
   padding-left: 35px;
   color: #FF927A;
-  background: #F8F5F0;
+  background: #ffeac8;
   border: none;
   border-radius: 10px;
   width: 100%;
   height: 45px;
   outline: none;
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 select{
   box-sizing:border-box;
   padding-left: 35px;
   color: #FF927A;
-  background: #F8F5F0;
+  background: #ffeac8;
   border: none;
   border-radius: 10px;
   width: 100%;
   height: 45px;
   outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;       /* Remove default arrow */
 }
 
 label {
@@ -99,7 +106,6 @@ button{
   border: none;
   color: white;
   background: #FE5631;
-  margin-top: 10px;
   height: 45px;
   width: 100%;
   font-size: 18px;
@@ -112,19 +118,36 @@ button:hover{
 }
 
 /* for ng */
-input.ng-valid::placeholder,
-input.ng-valid{
+input.ng-valid.ng-touched::placeholder,
+input.ng-valid.ng-touched{
   color:rgb(116, 207, 139);
 }
 
-input.ng-valid {
+input.ng-valid.ng-touched {
   border: 2px solid rgb(116, 207, 139);
 }
 
-input.ng-invalid::placeholder,
-input.ng-invalid {
+input.ng-invalid.ng-touched::placeholder,
+input.ng-invalid.ng-touched {
   color:#FE5631;
 }
-input.ng-invalid {
+input.ng-invalid.ng-touched {
+  border: 2px solid #FE5631;;
+}
+
+select.ng-valid.ng-touched::placeholder,
+select.ng-valid.ng-touched{
+  color:rgb(116, 207, 139);
+}
+
+select.ng-valid.ng-touched {
+  border: 2px solid rgb(116, 207, 139);
+}
+
+select.ng-invalid.ng-touched::placeholder,
+select.ng-invalid.ng-touched {
+  color:#FE5631;
+}
+select.ng-invalid.ng-touched {
   border: 2px solid #FE5631;;
 }
